@@ -12,7 +12,7 @@ public class Main {
         fillListArray.ArrayList();
         Benchmarks.stopBenchMark();
 
-        System.out.println("Benchmark for LinkedList : ");
+        System.out.println("Benchmark for LinkedList: ");
         Benchmarks.startBenchMark();
         fillLinkedList.LinkedList();
         Benchmarks.stopBenchMark();
