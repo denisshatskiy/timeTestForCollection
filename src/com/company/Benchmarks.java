@@ -8,6 +8,6 @@ public class Benchmarks {
 
     public static void stopBenchMark(){
         time = System.currentTimeMillis() - time;
-        System.out.println("Time = " + time + " mc");
+        System.out.print(time + " mc");
     }
 }

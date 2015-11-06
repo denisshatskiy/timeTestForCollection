@@ -1,35 +1,40 @@
 package com.company;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
 
-public class ListArrayExecuter {
-    ArrayList arrayList = new ArrayList();
+public class HashSetExecuter {
+    HashSet HashSet = new HashSet();
     Random random = new Random();
     private int size = 7000;
     private int  elementForSearch = 1549;
 
-    public ArrayList ArrayListAdd() {
+    public HashSet HashSetAdd() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) {
-            arrayList.add(random.nextInt(size));
+            HashSet.add(random.nextInt(size));
         }
         Benchmarks.stopBenchMark();
-        return arrayList;
+        return HashSet;
+
     }
 
-    public void ArrayFounder(){
+    public void HashSetFounder(){
         Benchmarks.startBenchMark();
-        for (int i = 0; i < size; i++){
-            arrayList.get(elementForSearch);
+        Iterator<Integer> iter = HashSet.iterator();
+        while (iter.hasNext()) {
+            int element = iter.next();
+            if (element == elementForSearch) {
+                break;
+            }
         }
         Benchmarks.stopBenchMark();
     }
 
-    public void ArrayDeleter(){
+    public void HashSetDeleter(){
         Benchmarks.startBenchMark();
-        Iterator<Integer> iter = arrayList.iterator();
+        Iterator<Integer> iter = HashSet.iterator();
         while (iter.hasNext()) {
             int element= iter.next();
             if (element == elementForSearch){
@@ -38,5 +43,4 @@ public class ListArrayExecuter {
         }
         Benchmarks.stopBenchMark();
     }
-
 }

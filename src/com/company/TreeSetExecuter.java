@@ -1,35 +1,40 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
+import java.util.TreeSet;
 
-public class ListArrayExecuter {
-    ArrayList arrayList = new ArrayList();
+public class TreeSetExecuter {
+    TreeSet TreeSet = new TreeSet();
     Random random = new Random();
     private int size = 7000;
     private int  elementForSearch = 1549;
 
-    public ArrayList ArrayListAdd() {
+    public TreeSet TreeSetAdd() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) {
-            arrayList.add(random.nextInt(size));
+            TreeSet.add(random.nextInt(size));
         }
         Benchmarks.stopBenchMark();
-        return arrayList;
+        return TreeSet;
+
     }
 
-    public void ArrayFounder(){
+    public void TreeSetFounder(){
         Benchmarks.startBenchMark();
-        for (int i = 0; i < size; i++){
-            arrayList.get(elementForSearch);
+        Iterator<Integer> iter = TreeSet.iterator();
+        while (iter.hasNext()) {
+            int element = iter.next();
+            if (element == elementForSearch) {
+                break;
+            }
         }
         Benchmarks.stopBenchMark();
     }
 
-    public void ArrayDeleter(){
+    public void TreeSetDeleter(){
         Benchmarks.startBenchMark();
-        Iterator<Integer> iter = arrayList.iterator();
+        Iterator<Integer> iter = TreeSet.iterator();
         while (iter.hasNext()) {
             int element= iter.next();
             if (element == elementForSearch){
@@ -38,5 +43,4 @@ public class ListArrayExecuter {
         }
         Benchmarks.stopBenchMark();
     }
-
 }
