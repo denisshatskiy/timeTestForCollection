@@ -2,6 +2,7 @@ package com.company;
 
 public class Benchmarks {
     private static long time;
+
     public static void startBenchMark(){
         time = System.currentTimeMillis();
     }

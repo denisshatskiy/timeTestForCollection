@@ -1,10 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-
-/**
- * Created by Denis_Shatskiy on 11/6/2015.
- */
 public class Comparator {
     public void CompareArrayListAndLinkedList(){
         ListArrayExecuter listArrayExecuter = new ListArrayExecuter();
@@ -46,5 +41,26 @@ public class Comparator {
         hashSetExecuter.HashSetDeleter();
         System.out.print(" vs ");
         treeSetExecuter.TreeSetDeleter();
+    }
+
+    public void CompareHashMapAndTreeMap(){
+        HashMapExecutor hashMapExecutor= new HashMapExecutor();
+        TreeMapExecuter treeMapExecuter= new TreeMapExecuter();
+
+        System.out.println("\n\nBenchmarks for HashSet vs TreeSet : ");
+        System.out.print("Add to : ");
+        hashMapExecutor.HashMapAdd();
+        System.out.print(" vs ");
+        treeMapExecuter.TreeMapAdd();
+
+        System.out.print("\nSearch in : ");
+        hashMapExecutor.HashMapFounder();
+        System.out.print(" vs ");
+        treeMapExecuter.TreeMapFounder();
+
+        System.out.print("\nDelete element : ");
+        hashMapExecutor.HashMapDeleter();
+        System.out.print(" vs ");
+        treeMapExecuter.TreeMapDeleter();
     }
 }
