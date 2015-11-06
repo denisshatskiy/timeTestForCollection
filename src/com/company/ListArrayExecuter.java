@@ -4,33 +4,35 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-/**
- * Created by Denis_Shatskiy on 11/6/2015.
- */
 public class ListArrayExecuter {
     ArrayList arrayList = new ArrayList();
     Random random = new Random();
-    int size = 7000;
-    int  elementForSearch = 1549;
+    private int size = 7000;
+    private int  elementForSearch = 1549;
 
-    public ArrayList ArrayList() {
+    public ArrayList ArrayListAdd() {
+        System.out.print("Add to : ");
+        Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) {
             arrayList.add(random.nextInt(size));
-
         }
+        Benchmarks.stopBenchMark();
         return arrayList;
+
     }
 
-    public ArrayList ArraySearch(){
+    public void ArrayFounder(){
+        System.out.print("Search : ");
+        Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++){
-            if (arrayList.get(i).equals(elementForSearch)) {
-                System.out.println(elementForSearch + " is located in [" + i + "] place in Arraylist");
-            }
+            arrayList.get(elementForSearch);
         }
-        return arrayList;
+        Benchmarks.stopBenchMark();
     }
 
-    public ArrayList ArrayDelete(){
+    public void ArrayDeleter(){
+        System.out.print("Remove : ");
+        Benchmarks.startBenchMark();
         Iterator<Integer> iter = arrayList.iterator();
         while (iter.hasNext()) {
             int element= iter.next();
@@ -38,9 +40,7 @@ public class ListArrayExecuter {
                 iter.remove();
             }
         }
-        System.out.println(elementForSearch + " was deleted from Arraylist");
-
-        return arrayList;
+        Benchmarks.stopBenchMark();
     }
 
 }
