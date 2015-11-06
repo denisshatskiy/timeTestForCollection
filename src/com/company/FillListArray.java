@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class FillListArray {
     public ArrayList ArrayList() {
         ArrayList arrayList = new ArrayList();
-        int size = 7000;
+        int size = 7000000;
         for (int i = 0; i < size; i++) {
             arrayList.add(Math.random());
         }

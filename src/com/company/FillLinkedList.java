@@ -8,7 +8,7 @@ import java.util.LinkedList;
 public class FillLinkedList {
    public LinkedList LinkedList(){
         LinkedList linkedList = new LinkedList();
-        int size = 7000;
+        int size = 7000000;
         for (int i = 0; i < size; i++) {
             linkedList.add(Math.random());
         }
