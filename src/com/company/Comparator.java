@@ -47,7 +47,7 @@ public class Comparator {
         HashMapExecutor hashMapExecutor= new HashMapExecutor();
         TreeMapExecuter treeMapExecuter= new TreeMapExecuter();
 
-        System.out.println("\n\nBenchmarks for HashMap vs TreeMap : ");
+        System.out.println("\n\nBenchmarks for HashMap vs TreeMap :  ");
         System.out.print("Add to : ");
         hashMapExecutor.HashMapAdd();
         System.out.print(" vs ");
