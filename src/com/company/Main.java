@@ -3,18 +3,40 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        FillListArray fillListArray = new FillListArray();
-        FillLinkedList fillLinkedList = new FillLinkedList();
+        ListArrayExecuter listArrayExecuter = new ListArrayExecuter();
+        LinkedListExecuter linkedListExecuter = new LinkedListExecuter();
         new Benchmarks();
 
-        System.out.println("Benchmark for ArrayList : ");
+        System.out.println("Benchmarks for ArrayList : ");
+        System.out.println("Add to : ");
         Benchmarks.startBenchMark();
-        fillListArray.ArrayList();
+        listArrayExecuter.ArrayList();
         Benchmarks.stopBenchMark();
 
-        System.out.println("Benchmark for LinkedList : ");
+        System.out.println("\nSearch : ");
         Benchmarks.startBenchMark();
-        fillLinkedList.LinkedList();
+        listArrayExecuter.ArraySearch();
+        Benchmarks.stopBenchMark();
+
+        System.out.println("\nRemove : ");
+        Benchmarks.startBenchMark();
+        listArrayExecuter.ArrayDelete();
+        Benchmarks.stopBenchMark();
+
+        System.out.println("\nBenchmarks for LinkedList : ");
+        System.out.println("Add to : ");
+        Benchmarks.startBenchMark();
+        linkedListExecuter.LinkedList();
+        Benchmarks.stopBenchMark();
+
+        System.out.println("\nSearch : ");
+        Benchmarks.startBenchMark();
+        linkedListExecuter.LinkedListSearch();
+        Benchmarks.stopBenchMark();
+
+        System.out.println("\nRemove : ");
+        Benchmarks.startBenchMark();
+        linkedListExecuter.LinkedListDelete();
         Benchmarks.stopBenchMark();
     }
 }
