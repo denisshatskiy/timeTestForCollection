@@ -5,7 +5,8 @@ import com.epam.Benchmarks;
 import java.util.TreeSet;
 
 public class TreeSetExecutor {
-    TreeSet treeSet = new TreeSet();
+    //TreeSet treeSet = new TreeSet<>();
+    TreeSet<Integer> treeSet = new TreeSet<Integer>();
     private int size = 7000;
     public long time;
 
@@ -19,8 +20,7 @@ public class TreeSetExecutor {
 
     public long treeSetSearchElement(){
         Benchmarks.startBenchMark();
-        for (int i = 0; i < treeSet.size(); i++)
-            if (treeSet.equals(i));
+        for (Integer TreeSet: treeSet) treeSet.hashCode();
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
         return time;

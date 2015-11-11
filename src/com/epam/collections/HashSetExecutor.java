@@ -5,7 +5,7 @@ import com.epam.Benchmarks;
 import java.util.HashSet;
 
 public class HashSetExecutor {
-    HashSet hashSet = new HashSet();
+    HashSet<Integer> hashSet = new HashSet<Integer>();
     private int size = 7000;
     public long time;
 
@@ -19,8 +19,7 @@ public class HashSetExecutor {
 
     public long hashSetSearchElement(){
         Benchmarks.startBenchMark();
-        for (int i = 0; i < hashSet.size(); i++)
-            if (hashSet.equals(i));
+        for (Integer HashSet: hashSet) hashSet.hashCode();
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
         return time;
