@@ -9,22 +9,13 @@ public class Comparator {
 
         System.out.println("Benchmarks for ArrayList vs LinkedList : ");
         System.out.print("Add to         : ");
-        listArrayExecutor.arrayListAddElement();
-        System.out.print(" vs ");
-        linkedListExecutor.linkedListAddElement();
-        System.out.print(" difference = "  + (listArrayExecutor.time - linkedListExecutor.time) + " mc");
+        System.out.print("difference = "  + (listArrayExecutor.arrayListAddElement() - linkedListExecutor.linkedListAddElement()) + " mc");
 
         System.out.print("\nSearch in      : ");
-        listArrayExecutor.arrayListSearchElement();
-        System.out.print(" vs ");
-        linkedListExecutor.linkedListSearchElement();
-        System.out.print(" difference = "  + (listArrayExecutor.time - linkedListExecutor.time) + " mc");
+        System.out.print("difference = "  + (listArrayExecutor.arrayListSearchElement() - linkedListExecutor.linkedListSearchElement()) + " mc");
 
         System.out.print("\nDelete element : ");
-        listArrayExecutor.arrayListDeleteElement();
-        System.out.print(" vs ");
-        linkedListExecutor.linkedListDeleteElement();
-        System.out.print(" difference = "  + (listArrayExecutor.time - linkedListExecutor.time) + " mc");
+        System.out.print("difference = "  + (listArrayExecutor.arrayListDeleteElement() - linkedListExecutor.linkedListDeleteElement()) + " mc");
     }
 
     public void compareHashSetAndTreeSet(){
@@ -33,22 +24,13 @@ public class Comparator {
 
         System.out.println("\n\nBenchmarks for HashSet vs TreeSet : ");
         System.out.print("Add to         : ");
-        hashSetExecutor.hashSetAddElement();
-        System.out.print(" vs ");
-        treeSetExecutor.treeSetAddElement();
-        System.out.print(" difference = "  + (hashSetExecutor.time - treeSetExecutor.time) + " mc");
+        System.out.print("difference = "  + (hashSetExecutor.hashSetAddElement() - treeSetExecutor.treeSetAddElement()) + " mc");
 
         System.out.print("\nSearch in      : ");
-        hashSetExecutor.hashSetSearchElement();
-        System.out.print(" vs ");
-        treeSetExecutor.treeSetSearchElement();
-        System.out.print(" difference = "  + (hashSetExecutor.time - treeSetExecutor.time) + " mc");
+        System.out.print("difference = "  + (hashSetExecutor.hashSetSearchElement() - treeSetExecutor.treeSetSearchElement()) + " mc");
 
         System.out.print("\nDelete element : ");
-        hashSetExecutor.hashSetDeleteElement();
-        System.out.print(" vs ");
-        treeSetExecutor.treeSetDeleteElement();
-        System.out.print(" difference = "  + (hashSetExecutor.time - treeSetExecutor.time) + " mc");
+        System.out.print("difference = "  + (hashSetExecutor.hashSetDeleteElement() - treeSetExecutor.treeSetDeleteElement()) + " mc");
     }
 
     public void compareHashMapAndTreeMap(){
@@ -57,21 +39,12 @@ public class Comparator {
 
         System.out.println("\n\nBenchmarks for HashMap vs TreeMap :  ");
         System.out.print("Add to         : ");
-        hashMapExecutor.hashMapAddElement();
-        System.out.print(" vs ");
-        treeMapExecutor.treeMapAddElement();
-        System.out.print(" difference = "  + (hashMapExecutor.time - treeMapExecutor.time) + " mc");
+        System.out.print("difference = "  + (hashMapExecutor.hashMapAddElement() - treeMapExecutor.treeMapAddElement()) + " mc");
 
         System.out.print("\nSearch in      : ");
-        hashMapExecutor.hashMapSearchElement();
-        System.out.print(" vs ");
-        treeMapExecutor.treeMapSearchElement();
-        System.out.print(" difference = "  + (hashMapExecutor.time - treeMapExecutor.time) + " mc");
+        System.out.print("difference = "  + (hashMapExecutor.hashMapSearchElement() - treeMapExecutor.treeMapSearchElement()) + " mc");
 
         System.out.print("\nDelete element : ");
-        hashMapExecutor.hashMapDeleteElement();
-        System.out.print(" vs ");
-        treeMapExecutor.treMapDeleteElement();
-        System.out.print(" difference = "  + (hashMapExecutor.time - treeMapExecutor.time) + " mc");
+        System.out.print("difference = "  + (hashMapExecutor.hashMapDeleteElement() - treeMapExecutor.treMapDeleteElement()) + " mc");
     }
 }
