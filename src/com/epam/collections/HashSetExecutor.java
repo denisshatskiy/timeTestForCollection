@@ -12,25 +12,22 @@ public class HashSetExecutor {
     public void  hashSetAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) hashSet.add(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void hashSetSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < hashSet.size(); i++)
             if (hashSet.equals(i));
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void hashSetDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < hashSet.size(); i++) hashSet.remove(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 }

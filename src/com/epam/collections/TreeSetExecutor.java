@@ -12,25 +12,22 @@ public class TreeSetExecutor {
     public void treeSetAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) treeSet.add(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void treeSetSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < treeSet.size(); i++)
             if (treeSet.equals(i));
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void treeSetDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < treeSet.size(); i++) treeSet.remove(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 }

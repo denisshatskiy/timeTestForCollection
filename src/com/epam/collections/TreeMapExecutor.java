@@ -12,24 +12,21 @@ public class TreeMapExecutor {
     public void treeMapAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.put(i,i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void treeMapSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.get(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void treMapDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.remove(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 }

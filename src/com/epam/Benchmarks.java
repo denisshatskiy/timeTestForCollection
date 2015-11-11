@@ -8,7 +8,7 @@ public class Benchmarks {
         time = System.currentTimeMillis();
     }
 
-    public static long stopBenchMark(){
+    public static long returnTotalTimeOfBenchmark(){
         timeTotal = System.currentTimeMillis() - time;
         return timeTotal;
     }

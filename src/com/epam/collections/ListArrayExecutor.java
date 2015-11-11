@@ -12,24 +12,22 @@ public class ListArrayExecutor {
     public void arrayListAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) arrayList.add(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
+
     }
 
     public void arrayListSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < arrayList.size(); i++) arrayList.get(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void arrayListDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < arrayList.size(); i++ ) arrayList.remove(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 }

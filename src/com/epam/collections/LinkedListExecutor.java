@@ -12,25 +12,22 @@ public class LinkedListExecutor {
     public void linkedListAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) linkedList.add(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void linkedListSearchElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < linkedList.size(); i++) linkedList.get(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 
     public void linkedListDeleteElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < linkedList.size(); i++) linkedList.remove(i);
-        Benchmarks.stopBenchMark();
+        time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
-        time = Benchmarks.stopBenchMark();
     }
 }
 
