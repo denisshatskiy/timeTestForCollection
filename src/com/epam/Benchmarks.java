@@ -14,6 +14,6 @@ public class Benchmarks {
     }
 
     public  static  void printBenchmark(){
-        System.out.print(timeTotal + " mc ");
+        System.out.print(timeTotal + " mc | ");
     }
 }
