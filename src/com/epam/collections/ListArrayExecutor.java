@@ -9,25 +9,28 @@ public class ListArrayExecutor {
     private int size = 7000;
     public long time;
 
-    public void arrayListAddElement() {
+    public long arrayListAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) arrayList.add(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
 
     }
 
-    public void arrayListSearchElement(){
+    public long arrayListSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < arrayList.size(); i++) arrayList.get(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void arrayListDeleteElement(){
+    public long arrayListDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < arrayList.size(); i++ ) arrayList.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 }

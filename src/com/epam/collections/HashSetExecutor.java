@@ -9,25 +9,28 @@ public class HashSetExecutor {
     private int size = 7000;
     public long time;
 
-    public void  hashSetAddElement() {
+    public long hashSetAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) hashSet.add(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void hashSetSearchElement(){
+    public long hashSetSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < hashSet.size(); i++)
             if (hashSet.equals(i));
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void hashSetDeleteElement(){
+    public long hashSetDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < hashSet.size(); i++) hashSet.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 }

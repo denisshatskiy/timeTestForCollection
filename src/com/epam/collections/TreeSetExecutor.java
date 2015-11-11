@@ -9,25 +9,28 @@ public class TreeSetExecutor {
     private int size = 7000;
     public long time;
 
-    public void treeSetAddElement() {
+    public long treeSetAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) treeSet.add(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void treeSetSearchElement(){
+    public long treeSetSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < treeSet.size(); i++)
             if (treeSet.equals(i));
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void treeSetDeleteElement(){
+    public long treeSetDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < treeSet.size(); i++) treeSet.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 }

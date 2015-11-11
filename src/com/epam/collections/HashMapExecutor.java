@@ -9,24 +9,27 @@ public class HashMapExecutor {
     private int size = 7000;
     public long time;
 
-    public void hashMapAddElement() {
+    public long hashMapAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) hashMap.put(i,i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void hashMapSearchElement(){
+    public long hashMapSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) hashMap.get(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void hashMapDeleteElement(){
+    public long hashMapDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) hashMap.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 }

@@ -9,24 +9,27 @@ public class TreeMapExecutor {
     private int size = 7000;
     public long time;
 
-    public void treeMapAddElement() {
+    public long treeMapAddElement() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.put(i,i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void treeMapSearchElement(){
+    public long treeMapSearchElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.get(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 
-    public void treMapDeleteElement(){
+    public long treMapDeleteElement(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
+        return time;
     }
 }
