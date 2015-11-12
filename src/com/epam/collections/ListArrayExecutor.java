@@ -10,7 +10,7 @@ public class ListArrayExecutor {
     private int size = 7000;
     public long time;
 
-    public long arrayListAddElement() {
+    public long getTimeOfAddOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) arrayList.add(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -18,7 +18,7 @@ public class ListArrayExecutor {
         return time;
     }
 
-    public long arrayListSearchElement(){
+    public long getTimeOfSearchOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < arrayList.size(); i++) arrayList.get(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -26,7 +26,7 @@ public class ListArrayExecutor {
         return time;
     }
 
-    public long arrayListDeleteElement(){
+    public long getTimeOfDeleteOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < arrayList.size(); i++ ) arrayList.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();

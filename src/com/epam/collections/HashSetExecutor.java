@@ -8,7 +8,7 @@ public class HashSetExecutor {
     Set<Integer> hashSet = new HashSet<>();
     public long time;
 
-    public long hashSetAddElement() {
+    public long getTimeOfAddOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) hashSet.add(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -16,7 +16,7 @@ public class HashSetExecutor {
         return time;
     }
 
-    public long hashSetSearchElement(){
+    public long getTimeOfSearchOperationProcessing(){
         Benchmarks.startBenchMark();
         for (Integer i : hashSet) i.hashCode();
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -24,7 +24,7 @@ public class HashSetExecutor {
         return time;
     }
 
-    public long hashSetDeleteElement(){
+    public long getTimeOfDeleteOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < hashSet.size(); i++) hashSet.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();

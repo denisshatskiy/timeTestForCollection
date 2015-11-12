@@ -6,11 +6,11 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class TreeSetExecutor {
-    Set<Integer> treeSet = new TreeSet<Integer>();
+    Set<Integer> treeSet = new TreeSet<>();
     private int size = 7000;
     public long time;
 
-    public long treeSetAddElement() {
+    public long getTimeOfAddOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) treeSet.add(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -18,7 +18,7 @@ public class TreeSetExecutor {
         return time;
     }
 
-    public long treeSetSearchElement(){
+    public long getTimeOfSearchOperationProcessing(){
         Benchmarks.startBenchMark();
         for (Integer i: treeSet) i.hashCode();
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -26,7 +26,7 @@ public class TreeSetExecutor {
         return time;
     }
 
-    public long treeSetDeleteElement(){
+    public long getTimeOfDeleteOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < treeSet.size(); i++) treeSet.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();

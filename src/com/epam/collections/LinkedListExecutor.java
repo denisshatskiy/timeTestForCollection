@@ -10,7 +10,7 @@ public class LinkedListExecutor {
     private int size = 7000;
     public long time;
 
-    public long linkedListAddElement() {
+    public long getTimeOfAddOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i++) linkedList.add(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -18,7 +18,7 @@ public class LinkedListExecutor {
         return time;
     }
 
-    public long linkedListSearchElement() {
+    public long getTimeOfSearchOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < linkedList.size(); i++) linkedList.get(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -26,7 +26,7 @@ public class LinkedListExecutor {
         return time;
     }
 
-    public long linkedListDeleteElement() {
+    public long getTimeOfDeleteOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < linkedList.size(); i++) linkedList.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();

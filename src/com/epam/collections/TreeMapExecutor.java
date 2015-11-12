@@ -11,7 +11,7 @@ public class TreeMapExecutor {
     private int size = 7000;
     public long time;
 
-    public long treeMapAddElement() {
+    public long getTimeOfAddOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.put(i,i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -19,7 +19,7 @@ public class TreeMapExecutor {
         return time;
     }
 
-    public long treeMapSearchElement(){
+    public long getTimeOfSearchOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.get(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -27,7 +27,7 @@ public class TreeMapExecutor {
         return time;
     }
 
-    public long treMapDeleteElement(){
+    public long getTimeOfDeleteOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) treeMap.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();

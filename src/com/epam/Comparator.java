@@ -9,13 +9,13 @@ public class Comparator {
 
         System.out.println("Benchmarks for ArrayList vs LinkedList : ");
         System.out.print("Add to         : ");
-        System.out.print("difference = "  + (listArrayExecutor.arrayListAddElement() - linkedListExecutor.linkedListAddElement()) + " mc");
+        System.out.print("difference = "  + (listArrayExecutor.getTimeOfAddOperationProcessing() - linkedListExecutor.getTimeOfAddOperationProcessing()) + " mc");
 
         System.out.print("\nSearch in      : ");
-        System.out.print("difference = "  + (listArrayExecutor.arrayListSearchElement() - linkedListExecutor.linkedListSearchElement()) + " mc");
+        System.out.print("difference = "  + (listArrayExecutor.getTimeOfSearchOperationProcessing() - linkedListExecutor.getTimeOfSearchOperationProcessing()) + " mc");
 
         System.out.print("\nDelete element : ");
-        System.out.print("difference = "  + (listArrayExecutor.arrayListDeleteElement() - linkedListExecutor.linkedListDeleteElement()) + " mc");
+        System.out.print("difference = "  + (listArrayExecutor.getTimeOfDeleteOperationProcessing() - linkedListExecutor.getTimeOfDeleteOperationProcessing()) + " mc");
     }
 
     public void compareHashSetAndTreeSet(){
@@ -24,13 +24,13 @@ public class Comparator {
 
         System.out.println("\n\nBenchmarks for HashSet vs TreeSet : ");
         System.out.print("Add to         : ");
-        System.out.print("difference = "  + (hashSetExecutor.hashSetAddElement() - treeSetExecutor.treeSetAddElement()) + " mc");
+        System.out.print("difference = "  + (hashSetExecutor.getTimeOfAddOperationProcessing() - treeSetExecutor.getTimeOfAddOperationProcessing()) + " mc");
 
         System.out.print("\nSearch in      : ");
-        System.out.print("difference = "  + (hashSetExecutor.hashSetSearchElement() - treeSetExecutor.treeSetSearchElement()) + " mc");
+        System.out.print("difference = "  + (hashSetExecutor.getTimeOfSearchOperationProcessing() - treeSetExecutor.getTimeOfSearchOperationProcessing()) + " mc");
 
         System.out.print("\nDelete element : ");
-        System.out.print("difference = "  + (hashSetExecutor.hashSetDeleteElement() - treeSetExecutor.treeSetDeleteElement()) + " mc");
+        System.out.print("difference = "  + (hashSetExecutor.getTimeOfDeleteOperationProcessing() - treeSetExecutor.getTimeOfDeleteOperationProcessing()) + " mc");
     }
 
     public void compareHashMapAndTreeMap(){
@@ -39,12 +39,12 @@ public class Comparator {
 
         System.out.println("\n\nBenchmarks for HashMap vs TreeMap :  ");
         System.out.print("Add to         : ");
-        System.out.print("difference = "  + (hashMapExecutor.hashMapAddElement() - treeMapExecutor.treeMapAddElement()) + " mc");
+        System.out.print("difference = "  + (hashMapExecutor.getTimeOfAddOperationProcessing() - treeMapExecutor.getTimeOfAddOperationProcessing()) + " mc");
 
         System.out.print("\nSearch in      : ");
-        System.out.print("difference = "  + (hashMapExecutor.hashMapSearchElement() - treeMapExecutor.treeMapSearchElement()) + " mc");
+        System.out.print("difference = "  + (hashMapExecutor.getTimeOfSearchOperationProcessing() - treeMapExecutor.getTimeOfSearchOperationProcessing()) + " mc");
 
         System.out.print("\nDelete element : ");
-        System.out.print("difference = "  + (hashMapExecutor.hashMapDeleteElement() - treeMapExecutor.treMapDeleteElement()) + " mc");
+        System.out.print("difference = "  + (hashMapExecutor.getTimeOfDeleteOperationProcessing() - treeMapExecutor.getTimeOfDeleteOperationProcessing()) + " mc");
     }
 }

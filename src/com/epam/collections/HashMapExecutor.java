@@ -9,7 +9,7 @@ public class HashMapExecutor {
     private int size = 7000;
     public long time;
 
-    public long hashMapAddElement() {
+    public long getTimeOfAddOperationProcessing() {
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) hashMap.put(i,i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -17,7 +17,7 @@ public class HashMapExecutor {
         return time;
     }
 
-    public long hashMapSearchElement(){
+    public long getTimeOfSearchOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) hashMap.get(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();
@@ -25,7 +25,7 @@ public class HashMapExecutor {
         return time;
     }
 
-    public long hashMapDeleteElement(){
+    public long getTimeOfDeleteOperationProcessing(){
         Benchmarks.startBenchMark();
         for (int i = 0; i < size; i ++) hashMap.remove(i);
         time = Benchmarks.returnTotalTimeOfBenchmark();

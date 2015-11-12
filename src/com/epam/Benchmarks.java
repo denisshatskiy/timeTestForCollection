@@ -1,19 +1,19 @@
 package com.epam;
 
 public class Benchmarks {
-    private static long time;
-    public static long timeTotal;
+    private static long startTime;
+    private static long totalTime;
 
     public static void startBenchMark(){
-        time = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
     }
 
     public static long returnTotalTimeOfBenchmark(){
-        timeTotal = System.currentTimeMillis() - time;
-        return timeTotal;
+        totalTime = System.currentTimeMillis() - startTime;
+        return totalTime;
     }
 
     public  static  void printBenchmark(){
-        System.out.print(timeTotal + " mc | ");
+        System.out.print(totalTime + " mc | ");
     }
 }
