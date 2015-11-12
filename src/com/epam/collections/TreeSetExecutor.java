@@ -2,11 +2,11 @@ package com.epam.collections;
 
 import com.epam.Benchmarks;
 
+import java.util.Set;
 import java.util.TreeSet;
 
 public class TreeSetExecutor {
-    //TreeSet treeSet = new TreeSet<>();
-    TreeSet<Integer> treeSet = new TreeSet<Integer>();
+    Set<Integer> treeSet = new TreeSet<Integer>();
     private int size = 7000;
     public long time;
 
@@ -20,7 +20,7 @@ public class TreeSetExecutor {
 
     public long treeSetSearchElement(){
         Benchmarks.startBenchMark();
-        for (Integer TreeSet: treeSet) treeSet.hashCode();
+        for (Integer i: treeSet) i.hashCode();
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
         return time;

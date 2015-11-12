@@ -5,7 +5,7 @@ import com.epam.Benchmarks;
 import java.util.*;
 
 public class HashMapExecutor {
-    HashMap<Integer, Integer> hashMap = new HashMap<>();
+    Map<Integer, Integer> hashMap = new HashMap<>();
     private int size = 7000;
     public long time;
 

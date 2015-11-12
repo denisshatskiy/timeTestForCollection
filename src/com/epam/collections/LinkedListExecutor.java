@@ -3,9 +3,10 @@ package com.epam.collections;
 import com.epam.Benchmarks;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class LinkedListExecutor {
-    LinkedList linkedList = new LinkedList();
+    List linkedList = new LinkedList();
     private int size = 7000;
     public long time;
 

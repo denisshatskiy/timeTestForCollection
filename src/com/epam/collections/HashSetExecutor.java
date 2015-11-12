@@ -1,12 +1,11 @@
 package com.epam.collections;
-
 import com.epam.Benchmarks;
-
 import java.util.HashSet;
+import java.util.Set;
 
 public class HashSetExecutor {
-    HashSet<Integer> hashSet = new HashSet<Integer>();
-    private int size = 7000;
+    int size = 7000;
+    Set<Integer> hashSet = new HashSet<>();
     public long time;
 
     public long hashSetAddElement() {
@@ -19,7 +18,7 @@ public class HashSetExecutor {
 
     public long hashSetSearchElement(){
         Benchmarks.startBenchMark();
-        for (Integer HashSet: hashSet) hashSet.hashCode();
+        for (Integer i : hashSet) i.hashCode();
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
         return time;

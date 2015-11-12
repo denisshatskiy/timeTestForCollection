@@ -3,9 +3,10 @@ package com.epam.collections;
 import com.epam.Benchmarks;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListArrayExecutor {
-    ArrayList arrayList = new ArrayList();
+    List arrayList = new ArrayList();
     private int size = 7000;
     public long time;
 
@@ -15,7 +16,6 @@ public class ListArrayExecutor {
         time = Benchmarks.returnTotalTimeOfBenchmark();
         Benchmarks.printBenchmark();
         return time;
-
     }
 
     public long arrayListSearchElement(){

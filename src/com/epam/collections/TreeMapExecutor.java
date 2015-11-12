@@ -1,11 +1,13 @@
 package com.epam.collections;
 
 import com.epam.Benchmarks;
+import com.epam.Main;
 
+import java.util.Map;
 import java.util.TreeMap;
 
 public class TreeMapExecutor {
-    TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+    Map<Integer, Integer> treeMap = new TreeMap<>();
     private int size = 7000;
     public long time;
 
